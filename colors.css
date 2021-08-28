@@ -1,0 +1,34 @@
+:root{
+    --colorPrincipalObscuro:#00796B;
+    --colorPrincipal:#009688;
+    --colorSecundario:#B2DFDB;
+    --colorFuentePrincipal:#212121;
+    --colorFuenteSecundario:#757575;
+    --colorHover:#FFFFFF;
+    --colorFondo:#00BCD4;
+
+}
+header{
+    background-color: var(--colorPrincipalObscuro);
+    color: var(--colorHover);
+}
+section{
+    background-color: var(--colorSecundario);
+    color: var(--colorFuentePrincipal);
+}
+nav,aside{
+    background-color: var(--colorPrincipal);
+}
+a{
+    background-color: var(--colorFondo);
+    color: var(--colorHover);
+}
+a:hover{
+    background-color: var(--colorSecundario);
+    color: var(--colorFuenteSecundario);
+    
+}
+footer{
+    background-color: var(--colorPrincipalObscuro);
+    color: var(--colorSecundario);
+}
