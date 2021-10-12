@@ -1,63 +1,109 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <title>Ejemplo de página</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="colors.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
 
-<head>
-    <title>Pagina reto curso</title>
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css" media="(min-width: 769px)">
-    <link rel="stylesheet" href="colors.css">
-    <link rel="stylesheet" href="tablet.css" media="(max-width: 768px)">
-    <link rel="stylesheet" href="desktop.css" media="(min-width: 769px)">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lobster&display=swap"
-        rel="stylesheet">
-</head>
-
-<body>
+  <body>
     <header>
-        <h2>Ejemplo de página</h2>
-        <h4>Subtítulo de página</h4>
+      <!-- Botón despleglable -->
+      <div
+        class="w3-sidebar w3-bar-block w3-border-right sidebar-color"
+        style="display: none"
+        id="mySidebar"
+      >
+        <button onclick="w3_close()" class="w3-bar-item w3-large">
+          Close &times;
+        </button>
+        <a href="#" class="w3-bar-item w3-button">Link 1</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+      </div>
+
+      <div class="w3-teal">
+        <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">
+          ☰
+        </button>
+      </div>
+      <!-- Contenido de página -->
+      <h1>Ejemplo de página</h1>
+      <h2>Subtítulo de página</h2>
     </header>
     <main>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Catálogo</a></li>
-                <li><a href="#">Pedidos</a></li>
-                <li><a href="#">Carro de compras</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Perfil</a></li>
-            </ul>
-        </nav>
-        <div id="contenedor">
-            <section>
-                <h2>Sección de la página</h2>
-                <article>
-                    <h3>Título de parrafo</h3>
-                    <p>
-                        Python and its broad variety of libraries are very well suited to develop<br>
-                        customized machine learning tools which tackle the complex challenges posed<br>
-                        by financial time series.
-                    </p>
-                </article>
-            </section>
-            <aside>
-                <h2>Redes sociales</h2>
-                <ul>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">Youtube</a></li>
-                </ul>
-            </aside>
-        </div>
-        <footer>
-            <address>
-                Andrés Ramirez &copy;
-                Andresramirez@gmail.com.ar
-            </address>
-        </footer>
-    </main>
-</body>
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Catálogo</a></li>
+          <li><a href="#">Pedidos</a></li>
+          <li><a href="#">Carro de compras</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+          <li><a href="#">Perfil</a></li>
+        </ul>
+      </nav>
+      <div id="contenedor">
+        <section>
+          <h2>Sección de la página</h2>
+          <article>
+            <h3>Título de parrafo</h3>
+            <p>
+              Python and its broad variety of libraries are very well suited to
+              develop
+              customized machine learning tools which tackle the complex
+              challenges posed
+              by financial time series.
+            </p>
+            <code>
+lower = 900
+upper = 1000
 
+print("Prime numbers between", lower, "and", upper, "are:")
+
+for num in range(lower, upper + 1):
+ # all prime numbers are greater than 1
+ if num > 1:
+     for i in range(2, num):
+         if (num % i) == 0:
+             break
+     else:
+         print(num)
+            </code>
+          </article>
+        </section>
+        <aside>
+          <h2>Redes sociales</h2>
+          <ul>
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Youtube</a></li>
+          </ul>
+        </aside>
+      </div>
+      <footer>
+        <address>Andrés Ramirez &copy; Andresramirez@gmail.com.ar</address>
+      </footer>
+    </main>
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+  </body>
 </html>

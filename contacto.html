@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ejemplo de página</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="colors.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Lobster&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Botón despleglable -->
+        <div class="w3-sidebar w3-bar-block w3-border-right sidebar-color" style="display: none" id="mySidebar">
+            <button onclick="w3_close()" class="w3-bar-item w3-large">
+                Close &times;
+            </button>
+            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+
+        <div class="w3-teal">
+            <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">
+                ☰
+            </button>
+        </div>
+        <!-- Contenido de página -->
+        <h1>Ejemplo de página</h1>
+        <h2>Subtítulo de página</h2>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Pedidos</a></li>
+                <li><a href="#">Carro de compras</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Perfil</a></li>
+            </ul>
+        </nav>
+        <div id="contenedor">
+            <section>
+                <article>
+                    <h2>Formulario de contacto</h2>
+                    <form>
+                        <label for="name">Nombre</label>
+                        <input type="text" placeholder="Ex. John" autocapitalize="on" id="name" required /><br />
+                        <label for="surname">Apellido</label>
+                        <input type="text" autocapitalize="on" placeholder="Ex. Smith" id="surname" required /><br />
+                        <label for="birth">Fecha de nacimiento </label>
+                        <input type="date" id="birth" required /><br />
+                        <label id="email">Email</label>
+                        <input type="email" placeholder="Example@email.com" id="email" required /><br />
+                        <label id="cel">Núm. celular</label>
+                        <input type="button" value="+54" />
+                        <input type="tel" placeholder="341 123-4567" id="birth" /><br />
+                        <label for="gender">Género:</label>
+                        <label>masculino
+                            <input type="radio" name="gender" value="male" id="gender" /><br />
+                        </label>
+                        <label>femenino
+                            <input type="radio" name="gender" value="female" id="gender" /><br />
+                        </label>
+                        <label>otro
+                            <input type="radio" name="gender" value="other" id="gender" /><br />
+                        </label>
+                        <label for="country">Pais de residencia</label><br />
+                        <select name="country" id="country">
+                            <optgroup label="América latina:">
+                                <option value="arg">Argentina</option>
+                                <option value="br">Brasil</option>
+                                <option value="py">Paraguay</option>
+                                <option value="ur">Uruguay</option>
+                            </optgroup>
+                            <optgroup label="Europa:">
+                                <option value="es">España</option>
+                                <option value="pl">Portugal</option>
+                                <option value="it">Italia</option>
+                                <option value="uk">Reino Unido</option>
+                            </optgroup>
+                        </select>
+                    </form>
+                </article>
+            </section>
+            <aside>
+                <h2>Redes sociales</h2>
+                <ul>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Youtube</a></li>
+                </ul>
+            </aside>
+        </div>
+        <footer>
+            <address>Andrés Ramirez &copy; Andresramirez@gmail.com.ar</address>
+        </footer>
+    </main>
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
